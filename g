@@ -1,9 +1,3 @@
---[[
-
-    i will try explain what everything does so u can read it and understand
-
-]]--
-
 -- Awaiting until game is fully loaded
 repeat task.wait() until game:IsLoaded()
 repeat task.wait() until game:GetService("Workspace").Players:FindFirstChild(game:GetService("Players").LocalPlayer.Name)
@@ -24,7 +18,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local LocalPlayer = Players.LocalPlayer
 local UserID = LocalPlayer.UserId
 local SetFPS = setfpscap or set_fps_cap
-local Locations = { -- I didnt like how u did ur setups so im using a table w indexing
+local Locations = {
     "-805.525635, 21.7499943, -286.839417, 0.0203150008, 5.37985869e-08, 0.999793649, 1.02281676e-08, 1, -5.40175193e-08, -0.999793649, 1.13234222e-08, 0.0203150008",
     "-858.259216, 21.5999546, -86.8053741, 0.997427404, -7.91406496e-09, 0.0716836229, 1.16351737e-08, 1, -5.14926022e-08, -0.0716836229, 5.2194185e-08, 0.997427404",
     "-875.610901, 21.5999527, -86.888916, 0.997768283, -2.35477771e-09, -0.0667718723, 1.4572733e-09, 1, -1.34900624e-08, 0.0667718723, 1.33626514e-08, 0.997768283",
