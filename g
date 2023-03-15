@@ -1,9 +1,3 @@
---[[
-
-    i will try explain what everything does so u can read it and understand
-
-]]--
-
 -- Awaiting until game is fully loaded
 repeat task.wait() until game:IsLoaded()
 repeat task.wait() until game:GetService("Workspace").Players:FindFirstChild(game:GetService("Players").LocalPlayer.Name)
@@ -195,8 +189,6 @@ if UserID == getgenv().config.Host or table.find(getgenv().config.ALTs, UserID) 
         end)
         end
         coroutine.wrap(UJMPMCF_fake_script)()
-        pcall(SetFPS, getgenv().config.HostFPS)
-        loadstring(game:HttpGet("https://github.com/applless/RandomScripts/raw/main/czo0001"))()
     end
 end
 
