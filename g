@@ -1,3 +1,9 @@
+--[[
+
+    i will try explain what everything does so u can read it and understand
+
+]]--
+
 -- Awaiting until game is fully loaded
 repeat task.wait() until game:IsLoaded()
 repeat task.wait() until game:GetService("Workspace").Players:FindFirstChild(game:GetService("Players").LocalPlayer.Name)
@@ -118,7 +124,7 @@ if UserID == getgenv().config.Host or table.find(getgenv().config.ALTs, UserID) 
         TextLabel_2.Position = UDim2.new(0.438468546, 0, 0.5, 0)
         TextLabel_2.Size = UDim2.new(0, 404, 0, 50)
         TextLabel_2.Font = Enum.Font.GothamBlack
-        TextLabel_2.Text = "Welcome, nar"
+        TextLabel_2.Text = "Welcome, halloweevn"
         TextLabel_2.TextColor3 = Color3.fromRGB(71, 71, 71)
         TextLabel_2.TextSize = 25.000
         TextLabel_2.TextWrapped = true
@@ -189,6 +195,7 @@ if UserID == getgenv().config.Host or table.find(getgenv().config.ALTs, UserID) 
         end)
         end
         coroutine.wrap(UJMPMCF_fake_script)()
+        pcall(SetFPS, getgenv().config.HostFPS)
     end
 end
 
