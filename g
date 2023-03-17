@@ -231,7 +231,7 @@ ReplicatedStorage.DefaultChatSystemChatEvents.OnMessageDoneFiltering.OnClientEve
                             _Index = _Index + 1;
                             local POS = string.split(Locations[tonumber(_Index)])
                             LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(POS[1], POS[2], POS[3], POS[4], POS[5], POS[6], POS[7], POS[8], POS[9], POS[10], POS[11], POS[12])
-                            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Anchored = true
+                            LocalPlayer.Humanoid.Anchored = true
                         else
                             _Index = _Index + 1; 
                         end
