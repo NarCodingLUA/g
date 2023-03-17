@@ -52,6 +52,7 @@ local Locations = {
     "-632.188354, 23.2457352, -281.743774, 0.999998748, 2.56295696e-08, -0.00159115717, -2.54797712e-08, 1, 9.41645695e-08, 0.00159115717, -9.41239051e-08, 0.999998748",
     "-398.823395, 21.9918308, -587.852417, 0.69815141, -3.5189057e-08, 0.715950191, 2.34877255e-08, 1, 2.62463349e-08, -0.715950191, -1.50787316e-09, 0.69815141",
     "-484.661987, 21.8657341, -82.3607101, -0.999899924, 4.76223541e-08, -0.0141452523, 4.65779486e-08, 1, 7.41638644e-08, 0.0141452523, 7.34975885e-08, -0.999899924",
+    "-219.879303, 21.8708935, -790.654663, -0.999768496, -3.15959836e-09, 0.021516148, -4.3560342e-09, 1, -5.55595463e-08, -0.021516148, -5.56404096e-08, -0.999768496",
 }
 
 -- Anti AFK
@@ -230,7 +231,7 @@ ReplicatedStorage.DefaultChatSystemChatEvents.OnMessageDoneFiltering.OnClientEve
                             _Index = _Index + 1;
                             local POS = string.split(Locations[tonumber(_Index)])
                             LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(POS[1], POS[2], POS[3], POS[4], POS[5], POS[6], POS[7], POS[8], POS[9], POS[10], POS[11], POS[12])
-                            LocalPlayer.Humanoid.Anchored = true
+                            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Anchored = true
                         else
                             _Index = _Index + 1; 
                         end
