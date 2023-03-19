@@ -59,12 +59,6 @@ for _, v in pairs(getconnections(LocalPlayer.Idled)) do
     v:Disable()
 end
 
-for _, v in pairs(game:GetService("Workspace"):GetDescendants()) do  -- anti sit
-    if v:IsA("Seat") then
-        v.Disabled = true
-    end
-end
-
 -- Checking if the user is inside of the config
 if UserID == getgenv().config.Host or table.find(getgenv().config.ALTs, UserID) then
     -- Just checking if user is a alt or not
