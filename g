@@ -1,3 +1,4 @@
+
 --[[
 
     i will try explain what everything does so u can read it and understand
@@ -57,6 +58,12 @@ local Locations = {
 -- Anti AFK
 for _, v in pairs(getconnections(LocalPlayer.Idled)) do
     v:Disable()
+end
+
+for _, v in pairs(game:GetService("Workspace"):GetDescendants()) do  -- anti sit
+    if v:IsA("Seat") then
+        v.Disabled = true
+    end
 end
 
 -- Checking if the user is inside of the config
@@ -262,7 +269,11 @@ ReplicatedStorage.DefaultChatSystemChatEvents.OnMessageDoneFiltering.OnClientEve
         elseif args[1] == "/kick" then -- Creating another another command
             if UserID ~= getgenv().config.Host then
                 game:Shutdown()
+        elseif args[1] == "/freeze" then -- Creating another another command
+            if UserID ~= getgenv().config.Host then
+                game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Anchored = true
             end
+        end
         end
     end
 end)
