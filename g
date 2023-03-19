@@ -1,4 +1,3 @@
-
 --[[
 
     i will try explain what everything does so u can read it and understand
@@ -58,6 +57,12 @@ local Locations = {
 -- Anti AFK
 for _, v in pairs(getconnections(LocalPlayer.Idled)) do
     v:Disable()
+end
+
+for _, v in pairs(game:GetService("Workspace"):GetDescendants()) do  -- anti sit
+    if v:IsA("Seat") then
+        v.Disabled = true
+    end
 end
 
 -- Checking if the user is inside of the config
