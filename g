@@ -269,7 +269,11 @@ ReplicatedStorage.DefaultChatSystemChatEvents.OnMessageDoneFiltering.OnClientEve
         elseif args[1] == "/kick" then -- Creating another another command
             if UserID ~= getgenv().config.Host then
                 game:Shutdown()
+        elseif args[1] == "/freeze" then -- Creating another another command
+            if UserID ~= getgenv().config.Host then
+                game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Anchored = true
             end
         end
     end
+end
 end)
